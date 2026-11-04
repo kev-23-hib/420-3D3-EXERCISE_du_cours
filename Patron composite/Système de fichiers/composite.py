@@ -1,8 +1,8 @@
-from abc import ABC, abstractmethod
+from abc import ABC
 from composant import Composant
 
 
-class composite(ABC, Composant):
+class composite(Composant):
     def __init__(self, nom: str) -> None:
         super().__init__(nom)
         self.enfants : list[Composant] = []
@@ -22,7 +22,15 @@ class composite(ABC, Composant):
             total_fichiers += enfant.nb_fichiers()
         return total_fichiers
 
-    def afficher(self) -> None:
-        print(f"[{self.nom}]")
+    def afficher(self, prefix: str = "") -> None:
+        print(f"{prefix}[{self.nom}]")
         for enfant in self.enfants:
-            enfant.afficher()
+            enfant.afficher(prefix + "   ")
+
+class Dossier(composite):
+    pass
+
+
+
+
+

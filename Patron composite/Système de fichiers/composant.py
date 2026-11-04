@@ -4,7 +4,8 @@ from abc import ABC, abstractmethod
 
 class Composant(ABC):
     def __init__(self, nom: str) -> None:
-        self.name = nom
+        self.nom = nom
+
     @abstractmethod
     def calculer_taille(self) -> int:
         pass
@@ -16,5 +17,5 @@ class Composant(ABC):
         pass
 
     @abstractmethod
-    def afficher(self, niveau: int = 0) -> None:
+    def afficher(self, prefix: str = "") -> None:
         pass

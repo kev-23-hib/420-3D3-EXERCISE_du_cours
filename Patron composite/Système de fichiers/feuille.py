@@ -17,5 +17,5 @@ class Fichier(feuille):
     def nb_fichiers(self) -> int:
         return 1
 
-    def afficher(self) -> None:
-        print(f"{self.nom} ({self.taille} Ko)")
+    def afficher(self, prefix: str = "") -> None:
+        print(f"{prefix}{self.nom} ({self.taille} Ko)")
