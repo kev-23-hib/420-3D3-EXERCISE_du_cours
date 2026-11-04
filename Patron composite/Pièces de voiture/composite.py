@@ -10,11 +10,11 @@ class Composite(Composant):
         self.enfant.append(composant)
 
     def nb_pieces(self) -> int:
-        return sum(e.nb_pieces() for e in self.enfant) // len(self.enfant) 
+        return sum(e.nb_pieces() for e in self.enfant) 
 
 
     def prix_total(self) -> float:
-        return sum(e.prix_total() for e in self.enfant) / len(self.enfant)
+        return sum(e.prix_total() for e in self.enfant) 
 
     
     def afficher(self, prefix: str = "") -> None:

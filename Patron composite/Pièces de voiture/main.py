@@ -12,9 +12,9 @@ freins.ajouter(PieceSimple("Plaquettes avant (x4)", 60.00))
 freins.ajouter(PieceSimple("Maître-cylindre", 95.00))
 
 
-moteur.ajouter(moteur)
-freins.ajouter(freins)
 
-print(f"Prix total : {freins.prix_total():.2f} $")
-print(f"Nombre de pièces : {freins.nb_pieces()}")
-freins.afficher()
+moteur.ajouter(freins)
+
+print(f"Prix total : {moteur.prix_total():.2f} $")
+print(f"Nombre de pièces : {moteur.nb_pieces()}")
+moteur.afficher()
